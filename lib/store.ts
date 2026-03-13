@@ -1,11 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterSlice from './features/counterSlice/counterSlice'
+import { productApi } from './features/product/productApi'
+import { fakeStoreApi } from './features/api/api'
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      counter: counterSlice
+      counter: counterSlice,
+      [fakeStoreApi.reducerPath]: fakeStoreApi.reducer
     },
+    middleware: (getDefaultMiddleware) => 
+      getDefaultMiddleware().concat(fakeStoreApi.middleware)
   })
 }
 
@@ -14,3 +19,4 @@ export type AppStore = ReturnType<typeof makeStore>
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<AppStore['getState']>
 export type AppDispatch = AppStore['dispatch']
+
