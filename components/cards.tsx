@@ -33,11 +33,19 @@ export default function Card() {
   const handleAddProduct = async () => {
     try {
       await createProduct({
+<<<<<<< HEAD
         title: "New Product",
         price: 19.99,
         description: "A new product added via RTK Query",
         categoryId: "2",
         images: ["https://via.placeholder.com/300"],
+=======
+        title: "Nh jg tv SR",
+        price: 29.99,
+        description: "Nh jg tv SR - Nh jg tv SR - Nh jg tv SR - Nh jg tv SR",
+        categoryId: "2",
+        images: ["https://rootsabroadtravel.com/wp-content/uploads/2024/03/Wonderful-Things-to-Do-in-Siem-Reap-Cambodia-Beyond-Angkor-Wat-1170x600.jpg"],
+>>>>>>> d7e9ae2f4c8595e0507e6f03fbe788c11536abda
       }).unwrap();
 
       setMessage("Product added successfully!");

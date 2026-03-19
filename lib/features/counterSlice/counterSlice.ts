@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import { createSlice } from "@reduxjs/toolkit";
 
 
+=======
+
+import { createSlice } from '@reduxjs/toolkit';
+>>>>>>> d7e9ae2f4c8595e0507e6f03fbe788c11536abda
 
 // Define type or interface
 export interface CounterState {
