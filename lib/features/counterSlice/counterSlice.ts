@@ -1,5 +1,6 @@
+import { createSlice } from "@reduxjs/toolkit";
 
-import { createSlice } from '@reduxjs/toolkit';
+
 
 // Define type or interface
 export interface CounterState {
